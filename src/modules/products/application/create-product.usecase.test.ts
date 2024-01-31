@@ -1,9 +1,9 @@
 import { beforeEach, describe, expect, test } from "vitest"
 
+import { MemoryDatabase } from "../../../infra/database/memory/memory-database"
 import { BadRequestError } from "../../../shared/errors/bad-request.error"
-import { MemoryDatabase } from "../../../shared/memory/memory-database"
 import { Name } from "../../../shared/value-objects/name"
-import { Numeric } from "../../../shared/value-objects/numeric"
+import { Price } from "../../../shared/value-objects/price"
 import { Product } from "../domain/product.entity"
 import { MemoryProductRepo } from "../infra/database/memory-product.repository"
 import { CreateProductUsecase } from "./create-product.usecase"
@@ -51,7 +51,7 @@ describe("Product Service", () => {
 
     expect(error).toBeInstanceOf(BadRequestError)
     expect(error.message).toBe("Error creating product")
-    expect(error.error).toContain(Numeric.errorMessage)
+    expect(error.error).toContain(Price.errorMessage)
     expect(error.error).toContain(Name.errorMessage)
   })
 })

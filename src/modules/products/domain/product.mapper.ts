@@ -1,6 +1,7 @@
 import { Id } from "../../../shared/value-objects/id"
 import { Name } from "../../../shared/value-objects/name"
 import { Numeric } from "../../../shared/value-objects/numeric"
+import { Price } from "../../../shared/value-objects/price"
 import { ProductDTO } from "./dtos/product.dto"
 import { Product } from "./product.entity"
 
@@ -19,7 +20,7 @@ export class ProductMapper {
       id: new Id(props.id),
       name: new Name(props.name),
       description: props.description,
-      price: new Numeric(props.price),
+      price: new Price(props.price),
     })
   }
 }

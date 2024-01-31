@@ -2,6 +2,7 @@ import { Result } from "../../../shared/result/result"
 import { Id } from "../../../shared/value-objects/id"
 import { Name } from "../../../shared/value-objects/name"
 import { Numeric } from "../../../shared/value-objects/numeric"
+import { Price } from "../../../shared/value-objects/price"
 import { CreateProductDTO } from "./dtos/create-product.dto"
 import { UpdateProductDTO } from "./dtos/update-product.dto"
 
@@ -34,9 +35,9 @@ export class Product {
   }
 
   static create(input: CreateProductDTO): Result<Product> {
-    const price = Numeric.create(input.price)
+    const price = Price.create(input.price)
     const name = Name.create(input.name)
-    const errors: any[] = [price, name]
+    const errors: any[] = [name, price]
     const results = Result.combine(errors)
     if (results.isFailure()) {
       return Result.fail(results.error)
