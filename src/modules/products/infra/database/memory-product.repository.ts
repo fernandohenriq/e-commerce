@@ -1,4 +1,4 @@
-import { MemoryDatabase } from "../../../../shared/memory/memory-database"
+import { MemoryDatabase } from "../../../../infra/database/memory/memory-database"
 import { Id } from "../../../../shared/value-objects/id"
 import { Product } from "../../domain/product.entity"
 import { ProductMapper } from "../../domain/product.mapper"

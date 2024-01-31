@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, test } from "vitest"
 
+import { MemoryDatabase } from "../../../infra/database/memory/memory-database"
 import { NotFoundError } from "../../../shared/errors/not-found.error"
-import { MemoryDatabase } from "../../../shared/memory/memory-database"
 import { Product } from "../domain/product.entity"
 import { MemoryProductRepo } from "../infra/database/memory-product.repository"
 import { FindByIdProductUsecase } from "./find-by-id-product.usecase"
@@ -36,6 +36,6 @@ describe("Product Service", () => {
 
     const error = (await findByIdProductUsecase.execute(input)).error as any
     expect(error).toBeInstanceOf(NotFoundError)
-    expect(error.message).toBe(`Product with id ${input.id} not found`)
+    expect(error.message).toBe(`Product not found with id: ${input.id}`)
   })
 })

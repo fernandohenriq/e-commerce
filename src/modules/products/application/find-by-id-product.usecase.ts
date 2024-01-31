@@ -9,11 +9,10 @@ import { ProductRepo } from "../domain/product.repository"
 export class FindByIdProductUsecase {
   constructor(private readonly productRepo: ProductRepo) {}
 
-  async execute(findProductDTO: FindProductDTO): Promise<Result<Product, AppError>> {
-    const id = new Id(findProductDTO.id)
-    const product = await this.productRepo.findById(id)
+  async execute({ id }: FindProductDTO): Promise<Result<Product, AppError>> {
+    const product = await this.productRepo.findById(new Id(id))
     if (product === null || product === undefined) {
-      return Result.fail(new NotFoundError(`Product with id ${findProductDTO.id} not found`))
+      return Result.fail(new NotFoundError(`Product not found with id: ${id}`))
     }
     return Result.ok(product)
   }

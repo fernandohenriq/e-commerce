@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, test } from "vitest"
 
+import { MemoryDatabase } from "../../../infra/database/memory/memory-database"
 import { NotFoundError } from "../../../shared/errors/not-found.error"
-import { MemoryDatabase } from "../../../shared/memory/memory-database"
 import { Product } from "../domain/product.entity"
 import { MemoryProductRepo } from "../infra/database/memory-product.repository"
 import { UpdateProductUsecase } from "./update-product.usecase"
