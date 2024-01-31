@@ -14,3 +14,7 @@ export type Res<T = unknown> = T & {
   status: (code: number) => Res<T>
   json: (data: any) => void
 }
+
+export type Next<T = () => any> = T
+
+export type Err<T = any> = T
