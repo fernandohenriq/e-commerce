@@ -14,6 +14,7 @@ export class Name {
   }
 
   static isValid(value: string): boolean {
+    if (typeof value !== "string") return false
     return Name.regex.test(value)
   }
 

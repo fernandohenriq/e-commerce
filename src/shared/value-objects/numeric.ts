@@ -13,7 +13,7 @@ export class Numeric {
   }
 
   static create(input: number): Result<Numeric> {
-    if (isNaN(input) || !isFinite(input)) {
+    if (!input || isNaN(input) || !isFinite(input)) {
       return Result.fail(Numeric.errorMessage)
     }
     return Result.ok(new Numeric(input))

@@ -16,6 +16,7 @@ export class Id {
   }
 
   static isValid(input: string): boolean {
+    if (typeof input !== "string") return false
     return Id.regex.test(input)
   }
 
