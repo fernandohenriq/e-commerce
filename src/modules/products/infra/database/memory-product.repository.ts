@@ -9,12 +9,12 @@ export class MemoryProductRepo implements ProductRepo {
 
   async save(product: Product): Promise<Product> {
     const data = ProductMapper.toDTO(product)
-    const alreadyExists = !!this.db.findBy("products", "id", data.id)
+    const alreadyExists = await this.db.findBy("products", "id", data.id)
     if (alreadyExists) {
-      await this.db.create("products", data)
+      await this.db.update("products", "id", data.id, data)
       return product
     }
-    await this.db.update("products", "id", data.id, data)
+    await this.db.create("products", data)
     return product
   }
 
