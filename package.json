@@ -7,9 +7,9 @@
   "private": true,
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-    "start": "node dist/src/index.js",
+    "start": "node build/src/index.js",
     "test": "vitest",
-    "build": "tsc && tsc-alias"
+    "build": "tsc"
   },
   "dependencies": {
     "date-fns": "^3.3.1",
