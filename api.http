@@ -1,0 +1,28 @@
+### Teste: OPTIONS /
+OPTIONS http://localhost:3000/
+
+### Criar Produto: POST /products
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "Nome do Produto",
+  "description": "Descrição do Produto",
+  "price": 19.99
+}
+
+### Buscar Produto por ID: GET /products/:id
+GET http://localhost:3000/products/123
+
+### Buscar Múltiplos Produtos: GET /products
+GET http://localhost:3000/products
+
+### Atualizar Produto por ID: PATCH /products/:id
+PATCH http://localhost:3000/products/123
+Content-Type: application/json
+
+{
+  "name": "Novo Nome do Produto",
+  "description": "Nova descrição do Produto",
+  "price": 25.99
+}
