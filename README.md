@@ -89,6 +89,10 @@ src/
 
 - <b>Adapters:</b> O padrão Adapter é empregado para ajustar interfaces e integrar componentes de maneira flexível, permitindo a adaptação de funcionalidades específicas sem comprometer a coesão do código.
 
+- <b>Dependency Injection Factory:</b> Facilita a injeção de dependências ao criar instâncias de objetos complexos, promovendo modularidade e desacoplamento no sistema
+
+<i>Alguns destes conceitos podem não terem sidos 100% utilizados neste projeto, as implementações parciais fica como possíveis melhorias futura de refatorações pontuais do código.</i>
+
 ## Possíveis Melhorias e Futuras Implementações
 
 Embora o projeto seja apenas para fins educacionais, segue algumas possíveis futuras melhorias e implementações:
