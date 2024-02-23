@@ -1,6 +1,6 @@
 # E-Commerce API (WIP)
 
-Este é um projeto de estudos em andamento, uma API para um e-commerce simples. Até o momento, apenas a funcionalidade de cadastro de produtos foi implementada.
+Este projeto é uma API de um e-commerce básico, o objetivo principal é demonstrar de forma prática e aplicada os conhecimentos adquiridos em desenvolvimento, especialmente nos princípios de arquitetura de software e design patterns com Node.js, porém sem a utilização de frameworks que facilitariam o desenvolvimento como o Nest.js. No momento, este projeto está ainda em desenvolvimento e apenas a funcionalidade de cadastro de produtos foi implementada, servindo como ponto de partida para a expansão do sistema.
 
 ## Arquitetura de Software e Design Patterns
 
