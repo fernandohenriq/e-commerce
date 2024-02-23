@@ -8,8 +8,6 @@ O projeto segue uma arquitetura modular inspirada nos princípios da Clean Archi
 
 ### Estrutura do Projeto
 
-O projeto segue uma arquitetura modular e práticas de Clean Architecture para garantir uma organização clara e manutenibilidade. Aqui está uma visão geral da estrutura:
-
 ```bash
 src/
 ├── @types
@@ -70,28 +68,6 @@ src/
         ├── name.ts
         └── ...
 ```
-
-### Design Patterns no Projeto
-
-- <b>Result (Either):</b> Utilizado para lidar com operações que podem ter resultados de sucesso ou falha, evitando exceções.
-
-- <b>SOLID:</b> O projeto adota os princípios SOLID, proporcionando uma base sólida para a construção e manutenção do código.
-
-- <b>Error Handling:</b> Utiliza um padrão centralizado para tratamento de erros, promovendo consistência na manipulação de exceções.
-
-- <b>Value Objects:</b> Utilizados para representar conceitos imutáveis, contribuindo para a modelagem rica de domínio.
-
-- <b>Mappers:</b> Podem ser usados para facilitar a conversão entre DTOs e entidades de domínio, simplificando a transformação de dados.
-
-- <b>Repositories:</b> Aplica o padrão Repository para isolar a lógica de acesso a dados, proporcionando uma abstração para operações de persistência.
-
-- <b>Repositório In-Memory para Testes:</b> Usa um repositório em memória para testes, seguindo o padrão de Repositório e permitindo operações de dados durante testes sem depender de um banco de dados externo.
-
-- <b>Adapters:</b> O padrão Adapter é empregado para ajustar interfaces e integrar componentes de maneira flexível, permitindo a adaptação de funcionalidades específicas sem comprometer a coesão do código.
-
-- <b>Dependency Injection Factory:</b> Facilita a injeção de dependências ao criar instâncias de objetos complexos, promovendo modularidade e desacoplamento no sistema
-
-<i>Alguns destes conceitos podem não terem sidos 100% utilizados neste projeto, as implementações parciais fica como possíveis melhorias futura de refatorações pontuais do código.</i>
 
 ## Possíveis Melhorias e Futuras Implementações
 
